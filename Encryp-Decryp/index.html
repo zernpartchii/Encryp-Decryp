@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script defer src="bootstrap//bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Crypt Tool</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="content w-100 px-5">
+            <div class="d-flex justify-content-between border-bottom border-light mt-3">
+                <h1 class="text-white display-4 mb-4">Encryption and Decryption Tool</h1>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="type" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Type of Encryption
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="custom" href="#">Customize</a>
+                        </li>
+                        <li><a class="dropdown-item" id="AES" href="#">AES (Advanced Encryption Standard)</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-outline-light fw-semibold ms-3" id="btnClear">Clear All</button>
+            </div>
+            <div class="d-flex justify-content-end">
+                <div class="card bg-transparent text-white border-0 me-3">
+                    <div class="card-header border-0">
+                        <h3>Text Encryption</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="input-control mb-3">
+                                <label class="mb-2">Enter any text to be Encrypted</label>
+                                <textarea id="encryptInput" cols="40" rows="4" class="form-control shadow bg-light"
+                                    placeholder="Enter plain text to be Encrypted" required></textarea>
+                                <button class="btn btn-primary text-white w-100 mt-3 fw-semibold fs-3"
+                                    id="btnEncrypt">Encrypt</button>
+                            </div>
+                            <div class="input-control mb-3">
+                                <label class="mb-2">Output</label>
+                                <textarea id="encryptOutput" cols="40" rows="4" class="form-control shadow bg-light"
+                                    placeholder="Encrypted data will appear here..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-white border-0 ms-3">
+                    <div class="card-header border-0">
+                        <h3>Text Decryption</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="input-control mb-3">
+                                <label class="mb-2">Enter encrypted text to Decrypt</label>
+                                <textarea id="decryptInput" cols="40" rows="4" class="form-control shadow bg-light"
+                                    placeholder="Enter text to be Decrypted" required></textarea>
+                                <button class="btn btn-danger text-white w-100 mt-3 fw-semibold fs-3"
+                                    id="btnDecrypt">Decrypt</button>
+                            </div>
+                            <div class="input-control mb-3">
+                                <label class="mb-2">Output</label>
+                                <textarea id="decryptOutput" cols="40" rows="4" class="form-control shadow bg-light"
+                                    placeholder="Decrypted data will appear here..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="backend.js"></script>
+    <script src="crypto-js.min.js"></script>
+</body>
+
+</html>
